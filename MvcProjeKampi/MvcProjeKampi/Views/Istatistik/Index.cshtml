@@ -1,0 +1,71 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Görev-2-</h2>
+
+
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem; float:left;margin-right:25px" >
+    <div class="card-header">Toplam Kategori Sayısı :</div>
+    <div class="card-body">
+        <h3 class="card-title">@ViewBag.Result1</h3>
+    </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem; float:left; margin-right:25px">
+    <div class="card-header">Yazılım kategorisine ait başlık sayısı :</div>
+    <div class="card-body">
+        <h3 class="card-title">@ViewBag.Result2</h3>
+    </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem; float:left; margin-right:25px">
+    <div class="card-header">Adında a harfi geçen yazar sayısı :</div>
+    <div class="card-body">
+        <h3 class="card-title">@ViewBag.Result3</h3>
+    </div>
+</div>
+
+
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem; float:left; margin-right:25px">
+    <div class="card-header">En fazla başlığa sahip kategori adı : </div>
+    <div class="card-body">
+        <h3 class="card-title">@ViewBag.Result4</h3>
+    </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem; float:left; margin-right:25px">
+    <div class="card-header">Kategori tablosunda durumu true olan kategoriler ile false olan kategoriler arasındaki sayısal fark:</div>
+    <div class="card-body">
+
+        <h3 class="card-title">Durumu True Olanlar:@ViewBag.Result5</h3>
+        <br />
+        <h3 class="card-title">Durumu False olanlar:@ViewBag.Result6</h3>
+        <br />
+        <h3 class="card-title">Aralarındaki Fark:@ViewBag.Result7</h3>
+    </div>
+</div>
+
+
+
+
+
+
+@*<div class="form-group">
+
+        Toplam Kategori Sayısı : @ViewBag.Result1
+        <br />
+        Yazılım kategorisine ait başlık sayısı : @ViewBag.Result2
+        <br />
+        Adında a harfi geçen yazar sayısı : @ViewBag.Result3
+        <br />
+        En fazla başlığa sahip kategori adı : @ViewBag.Result4
+        <br />
+        Kategori tablosunda durumu true olan kategoriler ile false olan kategoriler arasındaki sayısal fark:@ViewBag.Result7
+
+
+
+    </div>*@
