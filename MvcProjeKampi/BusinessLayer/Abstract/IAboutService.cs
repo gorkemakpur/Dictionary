@@ -11,8 +11,6 @@ namespace BusinessLayer.Abstract
     {
         List<About> GetList();
 
-        List<About> GetListByAboutID(int id);
-
         void AboutAdd(About about);
 
         About GetByID(int id);

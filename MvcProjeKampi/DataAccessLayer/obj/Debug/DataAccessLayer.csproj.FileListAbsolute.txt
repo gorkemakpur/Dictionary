@@ -20,3 +20,6 @@ D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccess
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_image.resources
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writerStatusAdded.resources
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_content_about_status.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_message_class.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contact_date.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addImageFıle.resources
