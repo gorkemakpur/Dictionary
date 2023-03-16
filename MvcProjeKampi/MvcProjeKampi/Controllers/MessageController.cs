@@ -15,15 +15,18 @@ namespace MvcProjeKampi.Controllers
     {
         MessageManager mm = new MessageManager(new EfMessageDal());
         MessageValidator messageValidator = new MessageValidator();
+        [Authorize]
         public ActionResult Inbox()
         {
-            var messageValues = mm.GetListInbox();
+            string p = (string)Session["WriterMail"];
+            var messageValues = mm.GetListInbox(p);
             return View(messageValues);
         }
 
         public ActionResult Sendbox()
         {
-            var messageValues = mm.GetListSendbox();
+            string p = (string)Session["WriterMail"];
+            var messageValues = mm.GetListSendbox(p);
             return View(messageValues);
         }
 
@@ -56,7 +59,7 @@ namespace MvcProjeKampi.Controllers
             {
                 p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 mm.AddMessage(p);
-                
+
                 return RedirectToAction("Sendbox");
             }
             else
@@ -68,6 +71,62 @@ namespace MvcProjeKampi.Controllers
                 }
             }
             return View();
+        }
+
+        public ActionResult MessageIsRead()
+        {
+            var values = mm.MessageIsRead();
+            return View(values);
+        }
+
+        public ActionResult MessageReadStatus(Message p)
+        {
+            mm.MessageReadStatusChange(p);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult MessageUnReaded()
+        {
+            var values = mm.MessageUnRead();
+            return View(values);
+        }
+
+
+        public ActionResult Draft()
+        {
+            var values = mm.DraftMessages();
+            return View(values);
+        }
+        public ActionResult MessageDraft(Message p)
+        {
+            mm.DraftAdd(p);
+            mm.AddMessage(p);
+            return View();
+        }
+
+        public ActionResult Trash()
+        {
+            var values = mm.TrashMessage();
+            return View(values);
+        }
+        public ActionResult MessageTrash(Message p)
+        {
+            mm.TrashAdd(p);
+            return View();
+        }
+
+
+
+
+
+
+
+
+
+
+        public PartialViewResult PartialFooter()
+        {
+            return PartialView();
         }
 
 

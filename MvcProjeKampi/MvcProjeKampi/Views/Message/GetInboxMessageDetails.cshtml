@@ -43,12 +43,11 @@
                                 <h6>
                                     Mail: @Html.DisplayFor(x => x.SenderMail)
                                     <span class="mailbox-read-time float-right">
-                                    @DateTime.Parse(Html.DisplayFor(x=>x.MessageDate).ToString()).ToString("dd-MMM-yyyy")
+                                        @DateTime.Parse(Html.DisplayFor(x => x.MessageDate).ToString()).ToString("dd-MMM-yyyy")
                                     </span>
                                 </h6>
                             </div>
                             <!-- /.mailbox-read-info -->
-                            
                             <!-- /.mailbox-controls -->
                             <div class="mailbox-read-message">
                                 <p>@Html.DisplayFor(x => x.MessageContent)</p>
@@ -59,6 +58,13 @@
 
                         <!-- /.card-footer -->
                     </div>
+
+
+                    <div class="card-tools">
+                        <a href="#" class="btn btn-success" data-toggle="tooltip" title="Previous">Okundu</a>
+                        <a href="#" class="btn btn-warning" data-toggle="tooltip" title="Previous">Spam</a>
+                    </div>
+
                     <!-- /.card -->
                 </div>
                 <!-- /.col -->

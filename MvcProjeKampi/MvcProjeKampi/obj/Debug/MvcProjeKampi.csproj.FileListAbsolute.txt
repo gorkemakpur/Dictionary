@@ -96,3 +96,7 @@ D:\.NET-project\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\System.Threading.T
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\FluentValidation.xml
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\System.Runtime.CompilerServices.Unsafe.xml
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\System.Threading.Tasks.Extensions.xml
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.dll
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.Mvc.dll
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.xml
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.Mvc.xml

@@ -29,10 +29,18 @@ namespace MvcProjeKampi.Controllers
             abm.AboutAdd(p);
             return RedirectToAction("Index");
         }
+        
+        public ActionResult ChangeStatus(int id)
+        {
+            var values = abm.GetByID(id);
+            abm.AboutDelete(values);
+            return RedirectToAction("Index");
+        }
 
         public PartialViewResult AboutPartial()
         {
             return PartialView();
         }
+
     }
 }

@@ -17,32 +17,58 @@
                         <span class="badge bg-primary float-right">@ViewBag.ContactCount</span>
                     </a>
                 </li>
-                <li class="nav-item active">
-                    <a href="/Message/Inbox" class="nav-link">
-                        <i class="fas fa-inbox"></i> Gelen Mesajlar
+
+
+
+                <li class="nav-item has-treeview">
+                    <a href="/Message/Inbox/" class="nav-link">
+                        <i class="fas fa-inbox" onclick="location.href='/Message/Inbox/'"></i>&nbsp Gelen Mesajlar(Tümü)
                         <span class="badge bg-primary float-right">@ViewBag.AdminReceiver</span>
                     </a>
+                    <ul class="nav nav-treeview">
+
+
+                        <li class="nav-item">
+                            <a href="/Message/MessageIsRead" class="nav-link">
+                                <i class="fas fa-inbox" style="color: seagreen"> Okunmuş Mesajlar &nbsp<span class="badge bg-gradient-gray float-right">@ViewBag.readedMessage</span></i>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="/Message/MessageUnReaded" class="nav-link">
+                                <i class="fas fa-inbox" style="color: darkgoldenrod"> Okunmamış Mesajlar &nbsp<span class="badge bg-warning float-right">@ViewBag.unReadedMessage</span></i>
+                            </a>
+                        </li>
+
+                    </ul>
                 </li>
+
+
+
+
                 <li class="nav-item">
                     <a href="/Message/Sendbox" class="nav-link">
                         <i class="far fa-envelope"></i> Gönderilen Mesajlar
                         <span class="badge bg-primary float-right">@ViewBag.AdminSender</span>
+
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/Message/Draft" class="nav-link">
                         <i class="far fa-file-alt"></i> Taslaklar
+                        <span class="badge bg-primary float-right">@ViewBag.draftMessage</span>
+
+                        
                     </a>
+
+
                 </li>
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-filter"></i> Spam
-                        <span class="badge bg-warning float-right">65</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/Message/Trash" class="nav-link">
                         <i class="far fa-trash-alt"></i> Çöp Kutusu
+                        <span class="badge bg-warning float-right">@ViewBag.thrashMessage</span>
                     </a>
                 </li>
             </ul>

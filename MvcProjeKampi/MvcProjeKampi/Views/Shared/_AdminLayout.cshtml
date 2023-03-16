@@ -54,16 +54,17 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
 
-
-                        <li class="nav-item has-treeview">
-                            <a href="/AdminCategory/Index" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Kategoriler
-                                </p>
-                            </a>
-                        </li>
-
+                        @if (User.IsInRole("B") || User.IsInRole("A"))
+                        {
+                            <li class="nav-item has-treeview">
+                                <a href="/AdminCategory/Index" class="nav-link">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Kategoriler
+                                    </p>
+                                </a>
+                            </li>
+                        }
 
                         <li class="nav-item">
                             <a href="/Heading/Index" class="nav-link">
@@ -142,14 +143,6 @@
 
 
 
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-table"></i>
-                                <p>
-                                    Yazılar
-                                </p>
-                            </a>
-                        </li>
 
                         <li class="nav-item">
                             <a href="pages/calendar.html" class="nav-link">
@@ -162,7 +155,7 @@
 
 
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
+                            <a href="/Galery/Index" class="nav-link">
                                 <i class="nav-icon far fa-image"></i>
                                 <p>
                                     Galeri
@@ -192,6 +185,14 @@
                             </a>
                         </li>
 
+                        <li class="nav-item has-treeview">
+                            <a href="/Skill/Index" class="nav-link">
+                                <i class="nav-icon fas fa-play"></i>
+                                <p>
+                                    Yetenekler Sayfasına Git
+                                </p>
+                            </a>
+                        </li>
 
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">

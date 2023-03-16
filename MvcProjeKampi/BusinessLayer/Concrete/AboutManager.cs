@@ -25,7 +25,10 @@ namespace BusinessLayer.Concrete
 
         public void AboutDelete(About about)
         {
-            _aboutDal.Delete(about);
+            //silme yerine aktif pasif değişimi yapıldı.
+            if (about.AboutStatus == true) { about.AboutStatus = false; }
+            else if (about.AboutStatus == false) { about.AboutStatus = true; }
+            _aboutDal.Update(about);
         }
 
         public void AboutUpdate(About about)

@@ -23,3 +23,6 @@ D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccess
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_message_class.resources
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contact_date.resources
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addImageFıle.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_Admin_table.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_Message_DraftTrashSpam.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_SkillTable.resources
