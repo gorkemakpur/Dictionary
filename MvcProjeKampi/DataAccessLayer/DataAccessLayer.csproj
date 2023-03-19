@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Abstract\IAboutDal.cs" />
     <Compile Include="Abstract\IAdminDal.cs" />
+    <Compile Include="Abstract\IAdminRoleDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Concrete\Repositories\WriterRepository.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
     <Compile Include="EntityFramework\EfAdminDal.cs" />
+    <Compile Include="EntityFramework\EfAdminRoleDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
@@ -122,6 +124,30 @@
     <Compile Include="Migrations\202303091321583_mig_SkillTable.designer.cs">
       <DependentUpon>202303091321583_mig_SkillTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303181422045_mig_AdminStatus.cs" />
+    <Compile Include="Migrations\202303181422045_mig_AdminStatus.designer.cs">
+      <DependentUpon>202303181422045_mig_AdminStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303182307547_mig_adminRolesAdded.cs" />
+    <Compile Include="Migrations\202303182307547_mig_adminRolesAdded.designer.cs">
+      <DependentUpon>202303182307547_mig_adminRolesAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303182309088_mig_adminRolesTypeChanged.cs" />
+    <Compile Include="Migrations\202303182309088_mig_adminRolesTypeChanged.designer.cs">
+      <DependentUpon>202303182309088_mig_adminRolesTypeChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303182320230_mig_test.cs" />
+    <Compile Include="Migrations\202303182320230_mig_test.designer.cs">
+      <DependentUpon>202303182320230_mig_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303182324549_mig_test3.cs" />
+    <Compile Include="Migrations\202303182324549_mig_test3.designer.cs">
+      <DependentUpon>202303182324549_mig_test3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303182329426_mig_test4.cs" />
+    <Compile Include="Migrations\202303182329426_mig_test4.designer.cs">
+      <DependentUpon>202303182329426_mig_test4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -171,6 +197,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303091321583_mig_SkillTable.resx">
       <DependentUpon>202303091321583_mig_SkillTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303181422045_mig_AdminStatus.resx">
+      <DependentUpon>202303181422045_mig_AdminStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303182307547_mig_adminRolesAdded.resx">
+      <DependentUpon>202303182307547_mig_adminRolesAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303182309088_mig_adminRolesTypeChanged.resx">
+      <DependentUpon>202303182309088_mig_adminRolesTypeChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303182320230_mig_test.resx">
+      <DependentUpon>202303182320230_mig_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303182324549_mig_test3.resx">
+      <DependentUpon>202303182324549_mig_test3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303182329426_mig_test4.resx">
+      <DependentUpon>202303182329426_mig_test4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

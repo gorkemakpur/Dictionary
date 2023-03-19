@@ -26,3 +26,9 @@ D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccess
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_Admin_table.resources
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_Message_DraftTrashSpam.resources
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_SkillTable.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_AdminStatus.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_adminRolesAdded.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_adminRolesTypeChanged.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_test.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_test3.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_test4.resources

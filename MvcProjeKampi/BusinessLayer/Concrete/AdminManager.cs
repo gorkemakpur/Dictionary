@@ -25,8 +25,12 @@ namespace BusinessLayer.Concrete
 
         public void AdminDelete(Admin admin)
         {
-            _adminDal.Delete(admin);
+            if (admin.AdminStatus == true) { admin.AdminStatus = false; }
+            else if (admin.AdminStatus == false) { admin.AdminStatus = true; }
+            _adminDal.Update(admin);
+
         }
+
 
         public void AdminUpdate(Admin admin)
         {

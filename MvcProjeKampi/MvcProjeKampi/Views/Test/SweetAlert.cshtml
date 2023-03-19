@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "SweetAlert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<head>
+    <title>reCAPTCHA demo: Simple page</title>
+    
+</head>
+<body>
+    <form action="?" method="POST">
+
+        <br />
+        <input type="submit" value="Submit">
+    </form>
+
+
+    </body>
+    <br />
+
+    <button class="btn btn-primary" id="btn1">Button1 </button>
+    <button class="btn btn-warning" id="btn2">Button2 </button>
+    <button class="btn btn-danger" id="btn3">Button3 </button>
+
+
+    <script>
+        $('#btn1').click(function () {
+            swal("Hello world!");
+        });
+    </script>
+
+
+
+    <script>
+        $('#btn2').click(function () {
+            swal("Here's the title!", "...and here's the text!");
+        });
+    </script>
+
+    <script>
+        $('#btn3').click(function () {
+            swal("Good job!", "You clicked the button!", "success");
+        });
+    </script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

@@ -20,6 +20,14 @@ namespace MvcProjeKampi.Controllers
             return View(headingValues);
         }
 
+
+        public ActionResult HeadingReport()
+        {
+            var headingValues = hm.GetList();
+            return View(headingValues);
+        }
+
+
         [HttpGet]
         public ActionResult AddHeading()
         {
@@ -39,9 +47,9 @@ namespace MvcProjeKampi.Controllers
                                                 }).ToList();
 
 
-
-            ViewBag.valueCategory = valueCategory;
             ViewBag.valueWriter = valueWriter;
+            ViewBag.valueCategory = valueCategory;
+            
             return View();
         }
         [HttpPost]
@@ -81,6 +89,9 @@ namespace MvcProjeKampi.Controllers
             hm.HeadingDelete(headingValue);
             return RedirectToAction("Index");
         }
+
+
+
 
     }
 }

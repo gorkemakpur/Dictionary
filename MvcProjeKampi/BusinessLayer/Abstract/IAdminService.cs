@@ -18,5 +18,7 @@ namespace BusinessLayer.Abstract
         void AdminUpdate(Admin admin);
 
         Admin GetByAdminID(int id);
+
+
     }
 }

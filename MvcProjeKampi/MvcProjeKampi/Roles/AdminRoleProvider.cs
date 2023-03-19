@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +41,7 @@ namespace MvcProjeKampi.Roles
         {
             Context c = new Context();
             var x = c.Admins.FirstOrDefault(y => y.AdminUserName == username);
-            return new string[] { x.AdminRole };
+            return new string[] { x.AdminRole.AdminRoleType};
         }
 
         public override string[] GetUsersInRole(string roleName)

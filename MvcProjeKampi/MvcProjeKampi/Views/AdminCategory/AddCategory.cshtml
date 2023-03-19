@@ -22,9 +22,18 @@
         <br />
 
 
-        <button class="btn btn-info">Kategoriyi Ekle</button>
+        <button class="btn btn-info" id="btn">Kategoriyi Ekle</button>
 
 
     </div>
 }
+
+
+<script>
+    $('#btn').click(function () {
+        swal("Ekleme Başarılı", "Kategorilere yönlendiriliyorsunuz", "success");
+    });
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
