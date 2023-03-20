@@ -1,4 +1,4 @@
-﻿    
+﻿  
 @{
     Layout = null;
 }
@@ -28,9 +28,11 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
+
                         <h3 class="mb-4 text-center">Bir hesabın var mı ? </h3>
 
 
+                        <span class="badge badge-danger">@ViewBag.Mesaj</span>
                         @using (Html.BeginForm("WriterLogin", "Login", FormMethod.Post))
                         {
                             <div class="form-group">
@@ -83,7 +85,7 @@
     <script src="~/AdminLTE-3.0.4/login-form-20/js/popper.js"></script>
     <script src="~/AdminLTE-3.0.4/login-form-20/js/bootstrap.min.js"></script>
     <script src="~/AdminLTE-3.0.4/login-form-20/js/main.js"></script>
-
+    
 </body>
 </html>
 

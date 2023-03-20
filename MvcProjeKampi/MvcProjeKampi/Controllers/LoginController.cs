@@ -8,6 +8,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.Security.Cryptography;
+using System.Text;
+//using static System.Console;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -28,12 +31,12 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult Index(Admin p)
         {
-
             var adminUserInfo = alm.GetAdmin(p.AdminUserName, p.AdminPassword);
 
             if (adminUserInfo != null)
             {
-                FormsAuthentication.SetAuthCookie(adminUserInfo.AdminUserName,false);
+
+                FormsAuthentication.SetAuthCookie(adminUserInfo.AdminUserName, false);
                 Session["AdminUserName"] = adminUserInfo.AdminUserName;
                 return RedirectToAction("Index", "AdminCategory");
             }
@@ -54,7 +57,8 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult WriterLogin(Writer p)
         {
-            var writerUserInfo = wlm.GetWriter(p.WriterMail,p.WriterPassword); 
+            p.WriterPassword = Sha512(p.WriterPassword);
+            var writerUserInfo = wlm.GetWriter(p.WriterMail, p.WriterPassword);
 
 
             if (writerUserInfo != null)
@@ -65,16 +69,43 @@ namespace MvcProjeKampi.Controllers
             }
             else
             {
-                ViewBag.Hata = "Hata";
-                return RedirectToAction("WriterLogin");
+                ViewBag.Mesaj = "Hatalı Giriş Yaptınız Lütfen Tekrar Deneyiniz";
+                return View("WriterLogin");
             }
+
         }
+
+
+        private string Sha512(string text)
+        {
+            SHA512 sha512Encrypting = new SHA512CryptoServiceProvider();
+            byte[] bytes = sha512Encrypting.ComputeHash(Encoding.UTF8.GetBytes(text));
+            StringBuilder builder = new StringBuilder();
+
+            foreach (var item in bytes)
+            {
+                builder.Append(item.ToString("x2"));
+            }
+            return builder.ToString();
+
+        }
+
+
+        //string HashPassword(string password)
+        //{
+        //    SHA256 hash = SHA256.Create();
+        //    var passwordBytes = Encoding.Default.GetBytes(password);
+        //    var hashedPassword= hash.ComputeHash(passwordBytes);
+        //    return Convert.ToHexString(hashedPassword);
+
+        //}
+
 
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
             Session.Abandon();
-            return RedirectToAction("Headings","Default");
+            return RedirectToAction("Headings", "Default");
         }
     }
 }

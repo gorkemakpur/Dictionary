@@ -15,6 +15,7 @@ namespace MvcProjeKampi.Controllers
         // GET: Chart
         HeadingManager hm = new HeadingManager(new EfHeadingDal());
         ContentManager cm = new ContentManager(new EfContentDal());
+        WriterManager wm = new WriterManager(new EfWriterDal());
         public ActionResult Index()
         {
             return View();
@@ -24,6 +25,14 @@ namespace MvcProjeKampi.Controllers
         {
             return View();
         }
+
+        public ActionResult Index3()
+        {
+            return View();
+        }
+
+
+
 
 
         public ActionResult CategoryChart()
@@ -37,13 +46,49 @@ namespace MvcProjeKampi.Controllers
             return Json(HeadingList(), JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult WriterChart()
+        {
+            return Json(WriterList(), JsonRequestBehavior.AllowGet);
+        }
+
+
+
+        public List<WriterModels> WriterList()
+        {
+            List<WriterModels> writerClasses = new List<WriterModels>();
+
+            var values = wm.GetList();
+            var counter = 0;
+            foreach (var item in values)
+            {
+                var values2 = cm.GetListByWriter(item.WriterID);
+                foreach (var item2 in values2)
+                {
+                    counter = counter + 1;
+                }
+                writerClasses.Add(new WriterModels()
+                {
+                    WriterName = item.WriterName+" "+item.WriterSurname,
+                    WriterCount = counter
+                });
+                counter = 0;
+            }
+
+
+            return writerClasses;
+        }
+
+
+
+
+
+
+
+
 
         public List<HeadingModels> HeadingList()
         {
             List<HeadingModels> headingClasses = new List<HeadingModels>();
-
-
-
 
             var values = hm.GetList();
             var counter = 0;
@@ -64,11 +109,6 @@ namespace MvcProjeKampi.Controllers
 
 
             return headingClasses;
-
-
-
-
-
         }
 
 
