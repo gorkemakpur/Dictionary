@@ -32,3 +32,4 @@ D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccess
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_test.resources
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_test3.resources
 D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_test4.resources
+D:\.NET-project\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_AdminPasswordLengthChange.resources

@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _imageFile = imageFile;
         }
 
+        public void AddImage(ImageFile image)
+        {
+            _imageFile.Add(image);
+        }
+
         public List<ImageFile> GetList()
         {
             return _imageFile.List();

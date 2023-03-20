@@ -53,16 +53,16 @@
                                 @foreach (var item in Model)
                                 {
                                     <div class="col-sm-2">
-                                    <a href="@item.ImagePath" data-toggle="lightbox" data-title="@item.ImageName" data-gallery="gallery">
-                                        <img src="@item.ImagePath" class="img-fluid mb-2" alt="white sample" style="width:250px;height:150px"/>
-                                    </a>
-                                </div>
+                                        <a href="@item.ImagePath" data-toggle="lightbox" data-title="@item.ImageName" data-gallery="gallery">
+                                            <img src="@item.ImagePath" class="img-fluid mb-2" alt="white sample" style="width:250px;height:150px" />
+                                        </a>
+                                    </div>
                                 }
-                                
 
                             </div>
                         </div>
                     </div>
+                    <a href="/Galery/ImageAdd" style="float:right"class="btn btn-success">Görsel Ekle</a>
                 </div>
             </div>
         </div><!-- /.container-fluid -->

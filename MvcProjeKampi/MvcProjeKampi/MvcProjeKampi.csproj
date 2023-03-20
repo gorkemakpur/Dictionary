@@ -145,6 +145,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\AuthorizationController.cs" />
+    <Compile Include="Controllers\CalendarController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Calendar.cs" />
     <Compile Include="Models\CategoryModels.cs" />
     <Compile Include="Models\HeadingModels.cs" />
     <Compile Include="Models\WriterModels.cs" />
@@ -2039,6 +2041,14 @@
     <Content Include="AdminLTE-3.0.4\Vitrin\css\simpleLightbox.css" />
     <Content Include="AdminLTE-3.0.4\Vitrin\css\snow.css" />
     <Content Include="AdminLTE-3.0.4\Vitrin\css\style.css" />
+    <Content Include="AdminLTE-3.0.4\Vitrin\images\1.PNG" />
+    <Content Include="AdminLTE-3.0.4\Vitrin\images\2.PNG" />
+    <Content Include="AdminLTE-3.0.4\Vitrin\images\3.PNG" />
+    <Content Include="AdminLTE-3.0.4\Vitrin\images\4.PNG" />
+    <Content Include="AdminLTE-3.0.4\Vitrin\images\5.PNG" />
+    <Content Include="AdminLTE-3.0.4\Vitrin\images\6.PNG" />
+    <Content Include="AdminLTE-3.0.4\Vitrin\images\7.PNG" />
+    <Content Include="AdminLTE-3.0.4\Vitrin\images\8.PNG" />
     <Content Include="AdminLTE-3.0.4\Vitrin\images\banner.jpg" />
     <Content Include="AdminLTE-3.0.4\Vitrin\images\close.png" />
     <Content Include="AdminLTE-3.0.4\Vitrin\images\contact.jpg" />
@@ -2665,9 +2675,13 @@
     <Content Include="Views\Authorization\EditAdmin.cshtml" />
     <Content Include="Views\Chart\Index2.cshtml" />
     <Content Include="Views\Chart\Index3.cshtml" />
+    <Content Include="Views\Calendar\Index.cshtml" />
+    <Content Include="Views\Galery\ImageAdd.cshtml" />
+    <Content Include="Views\Default\TrailerImdb.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

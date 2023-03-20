@@ -75,6 +75,7 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult EditWriter(Writer p)
         {
+            p.WriterPassword = Sha512(p.WriterPassword);
             ValidationResult result = writerValidator.Validate(p);
             if (result.IsValid)
             {

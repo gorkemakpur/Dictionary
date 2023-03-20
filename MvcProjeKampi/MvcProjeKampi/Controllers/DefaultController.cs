@@ -21,10 +21,16 @@ namespace MvcProjeKampi.Controllers
             return View(values);
         }
 
-        public PartialViewResult Index(int id=0)
+        public PartialViewResult Index(int id=1)
         {
             var contentList = cm.GetListByHeadingID(id);
             return PartialView(contentList);
         }
+
+        //public PartialViewResult TrailerImdb(int id=1)
+        //{
+        //    var contentList = cm.GetListByHeadingID(id);
+        //    return PartialView(contentList);
+        //}
     }
 }

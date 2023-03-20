@@ -148,6 +148,10 @@
     <Compile Include="Migrations\202303182329426_mig_test4.designer.cs">
       <DependentUpon>202303182329426_mig_test4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303201049057_mig_AdminPasswordLengthChange.cs" />
+    <Compile Include="Migrations\202303201049057_mig_AdminPasswordLengthChange.designer.cs">
+      <DependentUpon>202303201049057_mig_AdminPasswordLengthChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303182329426_mig_test4.resx">
       <DependentUpon>202303182329426_mig_test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303201049057_mig_AdminPasswordLengthChange.resx">
+      <DependentUpon>202303201049057_mig_AdminPasswordLengthChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

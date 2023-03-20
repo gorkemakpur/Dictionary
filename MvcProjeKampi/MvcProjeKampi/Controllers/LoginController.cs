@@ -31,6 +31,7 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult Index(Admin p)
         {
+            p.AdminPassword = Sha512(p.AdminPassword);
             var adminUserInfo = alm.GetAdmin(p.AdminUserName, p.AdminPassword);
 
             if (adminUserInfo != null)
@@ -105,7 +106,7 @@ namespace MvcProjeKampi.Controllers
         {
             FormsAuthentication.SignOut();
             Session.Abandon();
-            return RedirectToAction("Headings", "Default");
+            return RedirectToAction("WriterLogin", "Login");
         }
     }
 }

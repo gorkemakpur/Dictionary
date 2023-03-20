@@ -1,0 +1,76 @@
+﻿@using EntityLayer.Concrete
+@model List<Content>
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+
+                @*<div>
+                    <iframe width="500"
+                            height="400"
+                            style="margin-left:25%"
+                            src="https://www.youtube.com/embed/HhesaQXLuRY"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share"
+                            allowfullscreen>
+                    </iframe>
+
+                    <a href="https://www.imdb.com/title/tt0903747/?ref_=nv_sr_srsg_0">
+                        <img src="~/AdminLTE-3.0.4/dist/img/imdb.jpg" alt="IMDB" width="50" height="50" style="float:right;margin-right:50px">
+                    </a>
+                    <span class="badge badge-success" style="width:70px; height:50px;text-align:center; border-radius:50px; font-size:31px; float:right">9.6</span>
+
+                </div>*@
+
+
+                <!-- Timelime example  -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- The time line -->
+                        <div class="timeline">
+                            <!-- timeline time label -->
+                            @foreach (var item in Model)
+                            {
+                                <div class="time-label">
+                                    <span class="bg-success">
+                                        @(((DateTime)item.ContentDate).ToString("dd-MMM-yyyy"))
+                                    </span>
+                                </div>
+
+
+                                <!-- /.timeline-label -->
+                                <!-- timeline item -->
+                                <div>
+                                    <i class="fas fa-comment bg-yellow"></i>
+                                    <div class="timeline-item">
+                                        <h3 class="timeline-header"><a href="#">@item.Heading.HeadingName</a> <a href="#" class="badge badge-warning">-@item.Writer.WriterName @item.Writer.WriterSurname- </a></h3>
+                                        <div class="timeline-body">
+                                            @item.ContentValue
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END timeline item -->
+                            }
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </div>
+            <!-- /.timeline -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- ./wrapper -->
+</body>
+</html>
